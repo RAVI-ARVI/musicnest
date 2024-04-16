@@ -1,3 +1,5 @@
+import HeroSection from "@/components/HeroSection";
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -15,9 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={inter.className}>
-        navbar
+        <div className="relative w-full flex items-center justify-center">
+          <Navbar />
+          <HeroSection />
+        </div>
         {children}
       </body>
     </html>
